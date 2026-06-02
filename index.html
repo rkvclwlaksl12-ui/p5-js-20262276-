@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>나의 p5.js 비주얼 포트폴리오</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      display: flex; flex-direction: column; align-items: center;
+      min-height: 100vh; padding: 40px 24px;
+      background: linear-gradient(135deg, #1e1e2f 0%, #2d2d44 100%);
+      color: #f5f5f5; font-family: 'Segoe UI', sans-serif;
+    }
+    h1 { font-size: 2rem; margin-bottom: 8px; letter-spacing: 1px; }
+    .subtitle { color: #aab; margin-bottom: 32px; font-size: 0.95rem; }
+    #projects {
+      display: grid; grid-template-columns: 1fr 1fr;
+      width: 100%; max-width: 640px; gap: 20px;
+    }
+    .card {
+      background: #fff; border-radius: 14px; overflow: hidden;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.35);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 14px 32px rgba(0,0,0,0.5);
+    }
+    .label {
+      padding: 10px 14px; font-size: 0.85rem; font-weight: 600;
+      background: #2d2d44; color: #fff;
+      display: flex; justify-content: space-between;
+    }
+    .label span.type { color: #7df; font-weight: 400; }
+    .cell { aspect-ratio: 16 / 9; position: relative; overflow: hidden; }
+    .cell iframe {
+      position: absolute; top: 0; left: 0;
+      width: 600px; height: 400px; border: none;
+      transform-origin: top left; transform: scale(0.5);
+    }
+    footer { margin-top: 32px; font-size: 0.8rem; color: #889; }
+  </style>
+</head>
+<body>
+  <h1>나의 p5.js 작품</h1>
+  <p class="subtitle">비주얼 포트폴리오 · 과제 1~4 모음</p>
+
+  <main id="projects">
+    <div class="card">
+      <div class="label">과제 1 <span class="type">정적</span></div>
+      <div class="cell"><iframe src="sample1/index.html"></iframe></div>
+    </div>
+    <div class="card">
+      <div class="label">과제 4 <span class="type">동적</span></div>
+      <div class="cell"><iframe src="sample4/index.html"></iframe></div>
+    </div>
+    <div class="card">
+      <div class="label">과제 2 <span class="type">정적</span></div>
+      <div class="cell"><iframe src="sample2/index.html"></iframe></div>
+    </div>
+    <div class="card">
+      <div class="label">과제 3 <span class="type">동적</span></div>
+      <div class="cell"><iframe src="sample3/index.html"></iframe></div>
+    </div>
+  </main>
+
+  <footer>한국폴리텍대학 · p5.js Visual Portfolio</footer>
+</body>
+</html>
